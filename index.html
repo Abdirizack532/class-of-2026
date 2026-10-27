@@ -1,1 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Class of 2026 | Radiography & Imaging 🎓</title>
+
+<style>
+:root {
+    --black: #080a0f;
+    --navy: #101827;
+    --blue: #2f6da3;
+    --gold: #e8c46a;
+    --cream: #fff9e9;
+    --white: #f5f7fa;
+    --muted: #adb6c5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(47,109,163,.18), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(232,196,106,.10), transparent 30%),
+        var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    min-height: 100vh;
+    padding: 55px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.fade {
+    animation: fadeIn .9s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.label {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.button {
+    border: 0;
+    border-radius: 999px;
+    padding: 15px 27px;
+    margin-top: 22px;
+    background: linear-gradient(135deg, #2f6da3, #183e69);
+    box-shadow: 0 12px 35px rgba(47,109,163,.28);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.button:hover,
+.button:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.button.gold-button {
+    background: linear-gradient(135deg, #d6a943, #9c7124);
+}
+
+/* OPENING */
+
+#opening {
+    background:
+        linear-gradient(rgba(8,10,15,.25), rgba(8,10,15,.8)),
+        radial-gradient(circle at centre, #1a2940, #080a0f);
+}
+
+#opening h1 {
+    margin: 12px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(52px, 10vw, 105px);
+    line-height: 1;
+}
+
+#opening .intro-year {
+    color: var(--gold);
+    font-size: clamp(28px, 6vw, 48px);
+    font-family: Georgia, serif;
+}
+
+#opening p {
+    max-width: 720px;
+    margin: 20px auto;
+    color: #d5dae2;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.graduation-date {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 18px;
+    border: 1px solid rgba(232,196,106,.35);
+    border-radius: 999px;
+    color: var(--gold);
+}
+
+/* MEET THE FIVE */
+
+#graduates {
+    padding: 90px 7%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2 {
+    margin: 10px 0;
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(40px, 7vw, 70px);
+}
+
+.heading p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.card {
+    min-height: 230px;
+    padding: 28px 22px;
+    border: 1px solid rgba(232,196,106,.18);
+    border-radius: 23px;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    box-shadow: 0 18px 45px rgba(0,0,0,.25);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover,
+.card:active {
+    transform: translateY(-5px);
+    border-color: rgba(232,196,106,.55);
+}
+
+.card .number {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.card h3 {
+    margin: 18px 0 6px;
+    font-family: Georgia, serif;
+    font-size: 31px;
+}
+
+.card .tag {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.card .tap {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* TRIBUTES */
+
+.tribute {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 38px 30px;
+    border-left: 2px solid var(--gold);
+    border-radius: 0 24px 24px 0;
+    background: rgba(255,255,255,.05);
+}
+
+.tribute h3 {
+    margin: 5px 0;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 42px;
+}
+
+.tribute .title {
+    color: #9fc8ec;
+    font-weight: bold;
+}
+
+.tribute p {
+    color: #d6dce5;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* TIMELINE */
+
+#journey {
+    padding: 100px 7%;
+    background: rgba(255,255,255,.025);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.year {
+    position: relative;
+    margin-left: 18px;
+    padding: 0 0 45px 35px;
+    border-left: 2px solid rgba(232,196,106,.35);
+}
+
+.year::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -8px;
+    top: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 20px rgba(232,196,106,.5);
+}
+
+.year:last-child {
+    border-left-color: transparent;
+}
+
+.year strong {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.year h3 {
+    margin: 8px 0;
+    font-size: 23px;
+}
+
+.year p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* REVEAL */
+
+#reveal {
+    padding: 110px 7%;
+    text-align: center;
+}
+
+.big-reveal {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 11vw, 115px);
+    color: var(--gold);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.names {
+    margin: 40px auto;
+    max-width: 850px;
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 5vw, 42px);
+    line-height: 1.7;
+}
+
+.profession {
+    margin: 35px auto;
+    padding: 30px 20px;
+    max-width: 700px;
+    border: 1px solid rgba(232,196,106,.25);
+    border-radius: 25px;
+    background: rgba(255,255,255,.045);
+}
+
+.profession h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin: 5px;
+}
+
+/* FINAL MESSAGE */
+
+#final {
+    padding: 100px 7%;
+    background:
+        radial-gradient(circle, rgba(47,109,163,.22), transparent 55%);
+}
+
+.final-card {
+    max-width: 820px;
+    margin: auto;
+    padding: 50px 30px;
+    border-radius: 28px;
+    background: var(--cream);
+    color: #1d2632;
+    box-shadow: 0 25px 70px rgba(0,0,0,.38);
+}
+
+.final-card h2 {
+    margin-top: 0;
+    color: #183e69;
+    font-family: Georgia, serif;
+    font-size: clamp(37px, 7vw, 62px);
+}
+
+.final-card p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.final-card .final-names {
+    color: #9c7124;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+footer {
+    padding: 30px;
+    color: #778292;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+
+<section id="opening" class="screen">
+
+    <div class="container center fade">
+
+        <div class="label">
+            Radiography & Imaging
+        </div>
+
+        <div class="intro-year">
+            September 2022
+        </div>
+
+        <h1>
+            We started<br>
+            as students.
+        </h1>
+
+        <p>
+            Somewhere between classrooms, clinical placements,
+            examinations, conversations, difficult days and
+            unforgettable ones, more than a course was happening.
+        </p>
+
+        <div class="intro-year">
+            3 December 2026
+        </div>
+
+        <h1 class="gold">
+            You walk away<br>
+            as graduates. 🎓
+        </h1>
+
+        <div class="graduation-date">
+            CLASS OF 2026
+        </div>
+
+        <br>
+
+        <button
+            class="button gold-button"
+            type="button"
+            onclick="meetTheFive()"
+        >
+            Meet the Graduates →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MEET THE FIVE -->
+
+<section id="graduates" class="hidden">
+
+    <div class="container fade">
+
+        <div class="heading">
+
+            <div class="label">
+                Five journeys
+            </div>
+
+            <h2>Meet the Five 🎓</h2>
+
+            <p>
+                Five different personalities. Five different stories.
+                One course, one profession and one graduation day.
+                Tap a name to reveal the person behind it.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card" onclick="showTribute('fahim')">
+
+                <div class="number">01</div>
+
+                <h3>Fahim</h3>
+
+                <div class="tag">
+                    The Energy
+                </div>
+
+                <div class="tap">
+                    Tap to open →
+                </div>
+
+            </div>
+
+            <div class="card" onclick="showTribute('issa')">
+
+                <div class="number">02</div>
+
+                <h3>Issa</h3>
+
+                <div class="tag">
+                    Faith & Finance
+                </div>
+
+                <div class="tap">
+                    Tap to open →
+                </div>
+
+            </div>
+
+            <div class="card" onclick="showTribute('idris')">
+
+                <div class="number">03</div>
+
+                <h3>Idris</h3>
+
+                <div class="tag">
+                    The Brotherhood
+                </div>
+
+                <div class="tap">
+                    Tap to open →
+                </div>
+
+            </div>
+
+            <div class="card" onclick="showTribute('farhan')">
+
+                <div class="number">04</div>
+
+                <h3>Farhan</h3>
+
+                <div class="tag">
+                    Quiet Brilliance
+                </div>
+
+                <div class="tap">
+                    Tap to open →
+                </div>
+
+            </div>
+
+            <div class="card" onclick="showTribute('faiza')">
+
+                <div class="number">05</div>
+
+                <h3>Faiza</h3>
+
+                <div class="tag">
+                    The Encourager
+                </div>
+
+                <div class="tap">
+                    Tap to open →
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FAHIM -->
+
+        <div id="fahim" class="tribute hidden fade">
+
+            <div class="label">Graduate 01</div>
+
+            <h3>Fahim 🎓</h3>
+
+            <div class="title">
+                THE ENERGY
+            </div>
+
+            <p>
+                Some people naturally bring energy wherever they go,
+                and Fahim has always been one of those people.
+                Outgoing, lively and always ready to bring some life
+                into the moment.
+            </p>
+
+            <p>
+                From September 2022 to graduation day, the journey
+                would have felt a little quieter without that energy.
+                Today that same personality walks onto the graduation
+                stage as a Radiographer.
+            </p>
+
+        </div>
+
+        <!-- ISSA -->
+
+        <div id="issa" class="tribute hidden fade">
+
+            <div class="label">Graduate 02</div>
+
+            <h3>Issa 🎓</h3>
+
+            <div class="title">
+                FAITH & FINANCE
+            </div>
+
+            <p>
+                Some friendships are remembered through the
+                conversations they create. With Issa, religion
+                and money were never far from the discussion.
+            </p>
+
+            <p>
+                Those conversations made the friendship about more
+                than simply sharing a classroom. Different subjects,
+                different lessons and plenty of thinking along the way.
+                Now another subject can be added to those conversations:
+                becoming a graduate Radiographer.
+            </p>
+
+        </div>
+
+        <!-- IDRIS -->
+
+        <div id="idris" class="tribute hidden fade">
+
+            <div class="label">Graduate 03</div>
+
+            <h3>Idris 🎓</h3>
+
+            <div class="title">
+                THE BROTHERHOOD
+            </div>
+
+            <p>
+                Of this group, Idris became perhaps the closest to me.
+                The friendship became effortless: a vibe, someone I
+                could naturally be around and one of the people whose
+                presence became part of the whole experience.
+            </p>
+
+            <p>
+                Some classmates remain classmates. Others quietly
+                become much more than that. From September 2022 to
+                December 2026, what started through a course became
+                a friendship I genuinely value.
+            </p>
+
+        </div>
+
+        <!-- FARHAN -->
+
+        <div id="farhan" class="tribute hidden fade">
+
+            <div class="label">Graduate 04</div>
+
+            <h3>Farhan 🎓</h3>
+
+            <div class="title">
+                QUIET BRILLIANCE
+            </div>
+
+            <p>
+                Calm does not mean unnoticed. Farhan has always
+                carried a composed presence and an intelligence
+                that does not need noise around it.
+            </p>
+
+            <p>
+                Every group needs the person who reminds everyone
+                that confidence can be quiet too. The calm student
+                who started this journey in 2022 reaches the end
+                of it as a graduate in Radiography and Imaging.
+            </p>
+
+        </div>
+
+        <!-- FAIZA -->
+
+        <div id="faiza" class="tribute hidden fade">
+
+            <div class="label">Graduate 05</div>
+
+            <h3>Faiza 🎓</h3>
+
+            <div class="title">
+                THE ENCOURAGER
+            </div>
+
+            <p>
+                Encouragement is one of those things people rarely
+                forget, especially when it arrives exactly when
+                it is needed. Faiza has consistently been one of
+                those encouraging people in my journey.
+            </p>
+
+            <p>
+                And yes, there were also those moments when the rescue
+                was financial 😅. Some support arrives as words,
+                and apparently some arrives through M-Pesa.
+            </p>
+
+            <p>
+                Jokes aside, that support mattered. Seeing someone
+                who encouraged me through the journey now graduate
+                deserves its own celebration.
+            </p>
+
+        </div>
+
+        <div class="center">
+
+            <button
+                class="button"
+                type="button"
+                onclick="showJourney()"
+            >
+                Remember where it started? →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- JOURNEY -->
+
+<section id="journey" class="hidden">
+
+    <div class="container fade">
+
+        <div class="heading">
+
+            <div class="label">
+                September 2022 → December 2026
+            </div>
+
+            <h2>The Journey</h2>
+
+            <p>
+                Years do not always feel long while you are living
+                through them. Then one day you look back and realise
+                just how much happened in between.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="year">
+
+                <strong>2022</strong>
+
+                <h3>The beginning.</h3>
+
+                <p>
+                    September. A new course, new people and no idea
+                    yet how much life would happen before the final
+                    day arrived.
+                </p>
+
+            </div>
+
+            <div class="year">
+
+                <strong>2023</strong>
+
+                <h3>Now we were really in it.</h3>
+
+                <p>
+                    Classes, learning, friendships and the realisation
+                    that Radiography and Imaging was no small journey.
+                    But the group kept moving.
+                </p>
+
+            </div>
+
+            <div class="year">
+
+                <strong>2024</strong>
+
+                <h3>The middle chapters.</h3>
+
+                <p>
+                    More learning. More experience. More moments that
+                    would eventually become stories to laugh about
+                    once graduation finally arrived.
+                </p>
+
+            </div>
+
+            <div class="year">
+
+                <strong>2025</strong>
+
+                <h3>The finish line was becoming visible.</h3>
+
+                <p>
+                    By now, the people who had once simply started
+                    a course together had shared years of the same
+                    journey.
+                </p>
+
+            </div>
+
+            <div class="year">
+
+                <strong>2026 🎓</strong>
+
+                <h3>They made it.</h3>
+
+                <p>
+                    The assignments, classes, clinical experiences,
+                    difficult days and good ones finally lead here:
+                    graduation.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="center">
+
+            <button
+                class="button gold-button"
+                type="button"
+                onclick="showReveal()"
+            >
+                3 December 2026 →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- REVEAL -->
+
+<section id="reveal" class="hidden">
+
+    <div class="container fade">
+
+        <div class="label">
+            Class of 2026
+        </div>
+
+        <div class="big-reveal">
+            YOU<br>MADE IT. 🎓
+        </div>
+
+        <p>
+            The names that began this story as students
+            now deserve to be introduced differently.
+        </p>
+
+        <div class="names">
+            Fahim 🎓<br>
+            Issa 🎓<br>
+            Idris 🎓<br>
+            Farhan 🎓<br>
+            Faiza 🎓
+        </div>
+
+        <div class="profession">
+
+            <div class="label">
+                The new title
+            </div>
+
+            <h3>
+                Radiographers
+            </h3>
+
+            <p>
+                Radiography & Imaging
+            </p>
+
+            <strong class="gold">
+                3 December 2026
+            </strong>
+
+        </div>
+
+        <button
+            class="button"
+            type="button"
+            onclick="showFinal()"
+        >
+            One final message →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FINAL -->
+
+<section id="final" class="hidden">
+
+    <div class="container fade">
+
+        <div class="final-card">
+
+            <h2>
+                To the five of you... 🎓
+            </h2>
+
+            <p>
+                In September 2022, none of us could have known exactly
+                what the years ahead would look like.
+            </p>
+
+            <p>
+                Yet somewhere between the studying, clinical training,
+                examinations, conversations, laughter, stress and
+                ordinary days, something bigger than simply completing
+                a course was being built.
+            </p>
+
+            <p>
+                Fahim brought the energy. Issa brought conversations
+                that went beyond the classroom. Idris became one of
+                the closest friendships I carried from the journey.
+                Farhan showed that intelligence never needs to be loud.
+                And Faiza reminded me how powerful genuine encouragement
+                and support can be.
+            </p>
+
+            <p>
+                Today, I am not simply congratulating five people who
+                completed Radiography and Imaging.
+            </p>
+
+            <p>
+                I am congratulating five people whose journey I had
+                the privilege of witnessing.
+            </p>
+
+            <p class="final-names">
+                Fahim • Issa • Idris • Farhan • Faiza
+            </p>
+
+            <p>
+                Walk onto that stage knowing that the title waiting
+                on the other side was earned.
+            </p>
+
+            <p>
+                May what comes after graduation be even greater than
+                everything it took to reach it.
+            </p>
+
+            <h2>
+                Congratulations,<br>
+                Radiographers. 🎓
+            </h2>
+
+            <p>
+                <strong>3 December 2026</strong>
+            </p>
+
+            <button
+                class="button"
+                type="button"
+                onclick="restart()"
+            >
+                Back to the beginning ↻
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    September 2022 → 3 December 2026 • Radiography & Imaging 🎓
+</footer>
+
+<script>
+
+const graduates =
+    document.getElementById("graduates");
+
+const journey =
+    document.getElementById("journey");
+
+const reveal =
+    document.getElementById("reveal");
+
+const finalSection =
+    document.getElementById("final");
+
+const tributeIds = [
+    "fahim",
+    "issa",
+    "idris",
+    "farhan",
+    "faiza"
+];
+
+function meetTheFive() {
+
+    document
+        .getElementById("opening")
+        .classList
+        .add("hidden");
+
+    graduates.classList.remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function showTribute(name) {
+
+    tributeIds.forEach(function(id) {
+
+        document
+            .getElementById(id)
+            .classList
+            .add("hidden");
+
+    });
+
+    const selected =
+        document.getElementById(name);
+
+    selected.classList.remove("hidden");
+
+    setTimeout(function() {
+
+        selected.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 100);
+}
+
+function showJourney() {
+
+    journey.classList.remove("hidden");
+
+    setTimeout(function() {
+
+        journey.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+}
+
+function showReveal() {
+
+    reveal.classList.remove("hidden");
+
+    setTimeout(function() {
+
+        reveal.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+}
+
+function showFinal() {
+
+    finalSection.classList.remove("hidden");
+
+    setTimeout(function() {
+
+        finalSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+}
+
+function restart() {
+
+    graduates.classList.add("hidden");
+    journey.classList.add("hidden");
+    reveal.classList.add("hidden");
+    finalSection.classList.add("hidden");
+
+    tributeIds.forEach(function(id) {
+
+        document
+            .getElementById(id)
+            .classList
+            .add("hidden");
+
+    });
+
+    document
+        .getElementById("opening")
+        .classList
+        .remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
